@@ -10,8 +10,8 @@ import evolution.util.MapUtil;
 
 @Service
 public class AnyService {
-	public Map<String, Integer> partialSummarize(List<String> partialData) {
-		Map<String, Integer> partialSummary = new HashMap<>();
+	public Map<String, Double> partialSummarize(List<String> partialData) {
+		Map<String, Double> partialSummary = new HashMap<>();
 		for (String singleData : partialData) {
 			MapUtil.updateCount(singleData, partialSummary);
 		}
