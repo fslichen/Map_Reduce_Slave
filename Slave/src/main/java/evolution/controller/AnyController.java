@@ -16,7 +16,7 @@ public class AnyController {
 	private AnyService anyService;
 	
 	@PostMapping("/partialSummarize")
-	public Map<String, Integer> partialSummarize(@RequestBody List<String> partialData) {
+	public Map<String, Double> partialSummarize(@RequestBody List<String> partialData) {
 		return anyService.partialSummarize(partialData);
 	}
 }
