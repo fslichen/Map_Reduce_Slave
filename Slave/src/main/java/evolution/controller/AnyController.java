@@ -17,10 +17,10 @@ public class AnyController {
 	@Autowired
 	private AnyService anyService;
 	
-	@PostMapping("/partialSummarize")
-	public Map<String, Double> partialSummarize(@RequestBody List<String> partialData) {
-		Map<String, Double> dataCount = anyService.partialSummarize(partialData);
-		log.info("The data count is {}.", dataCount);
-		return dataCount;
+	@PostMapping("/mapReduce")
+	public Map<String, Double> mapReduce(@RequestBody List<String> partialData) {
+		Map<String, Double> counts = anyService.mapReduce(partialData);
+		log.info("The map-reduce result is {}.", counts);
+		return counts;
 	}
 }
